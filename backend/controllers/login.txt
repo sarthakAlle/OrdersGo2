@@ -1,0 +1,78 @@
+router.post('/login', async (req, res) => {
+  const { email, password } = req.body;
+
+  try {
+    // Find the user by email
+    const user = await User.findOne({ email });
+
+    // If the user is not found, return an error
+    if (!user) {
+      return res.status(401).json({ message: 'Invalid credentials' });
+    }
+
+    // Check if the password is correct
+    const isPasswordValid = await bcrypt.compare(password, user.password);
+
+    // If the password is not valid, return an error
+    if (!isPasswordValid) {
+      return res.status(401).json({ message: 'Invalid credentials' });
+    }
+
+    // If email and password are correct, you can generate a token here (e.g., using JWT) and send it in the response
+    // For simplicity, let's assume you have a function to generate a JWT token
+    const token = generateToken(user);
+
+    // You can also set the token as a cookie or in the response header based on your authentication strategy
+
+    // Send a success response with the token
+    res.status(200).json({ message: 'Login successful', token });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: 'Internal Server Error' });
+  }
+});
+
+// Function to generate a JWT token (You would need to implement this according to your authentication strategy)
+function generateToken(user) {
+  // Your implementation to generate a token (e.g., using the 'jsonwebtoken' library)
+  // Example: const token = jwt.sign({ userId: user._id }, 'your-secret-key', { expiresIn: '1h' });
+  // Return the generated token
+}
+
+module.exports = router;
+
+
+
+const authUser=async (req,res)=>{
+    try{
+        
+        const {email,password}=req.body;
+        
+        const user= await User.findOne({email});
+        const token=generateToken(user._id);
+        const options = {
+            expires: new Date(Date.now() + 10* 24 * 60 * 60 * 1000),
+            httpOnly: true,
+        };
+        if(user && (await user.matchPassword(password))){
+            return res.status(201).cookie("token",token,options).json({
+                    "message":"success full login" , 
+                     token,
+
+                });
+        }
+        else{
+            res.status(401);
+            throw new Error('Invalid email or password');
+        }
+    }
+    catch(error){
+        res.status(401).json({
+            message:error.message,
+            
+        })
+    }
+
+   
+}
+module.exports={registerUser,authUser}

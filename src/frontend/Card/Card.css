@@ -1,0 +1,40 @@
+.custom-card {
+  background-color: #ddd;
+  color: black;
+  margin: 20px;
+  margin-top: 40px;
+  width: 18rem;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.price-button {
+  margin: auto ;
+  margin-bottom:  5px !important;
+  text-decoration: none;
+  background-color: #ff0074;
+  width: 140px;
+  color: black;
+  border-radius: 10px;
+  padding: 10px;
+  font-size:15px;
+}
+
+.price-button:hover {
+  color: white;
+}
+
+.quantity {
+  color: black;
+  border-radius: 10px;
+  background-color: peachpuff;
+  height: 30px;
+  margin: 10px;
+}
+
+@media screen and (max-width:900px) {
+  .custom-card {
+    margin: 1vw auto;
+  }
+}

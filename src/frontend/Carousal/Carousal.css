@@ -1,0 +1,49 @@
+.carousel-custom {
+    border-radius: 30px;
+    margin: 40px;
+    object-fit: cover;
+}
+
+.my-custom-caption h1,
+.my-custom-caption p {
+    margin-left: 40vw;
+    text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+}
+
+.my-custom-caption h1 {
+    white-space: nowrap;
+    font-size: 30px;
+}
+
+.custom-form {
+    z-index: 1;
+    display: inline-block;
+    float: inline-end;
+}
+
+.custom-form button {
+    margin: 10px;
+    border-radius: 10px;
+    color: gainsboro;
+}
+
+.carousal-input {
+    background-color: white;
+    width: 800px;
+    float: inline-end;
+}
+
+@media screen and (max-width:900px) {
+    .carousel-custom {
+        margin: 1vw auto;
+        height: 200px;
+        width: 90%;
+    }
+
+    .my-custom-caption h1,
+    .my-custom-caption p {
+        margin-left: 0;
+        font-size: 5vw;
+    }
+
+}
