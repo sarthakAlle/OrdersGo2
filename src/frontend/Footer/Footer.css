@@ -7,8 +7,7 @@
   width: 100%;
   display: flex;
   justify-content: space-around;
-  position: absolute;
-  bottom: 0;
+  position: relative;
 }
 link{
   text-decoration: none;
@@ -21,9 +20,7 @@ link{
   display: flex;
   flex-direction: column;
 }
-.footer-section h3,ul li, input[type='email']{
-  text-align: left;
-}
+
 .footer-section input[type='email']{
   width: 200px;
 }
@@ -45,4 +42,11 @@ link{
     align-items: center;
   }
   
+}
+
+@media screen and (min-width:1500px) and (min-height:1140px){
+  .custom-footer{
+    position: absolute;
+    bottom: 0;
+  }
 }
