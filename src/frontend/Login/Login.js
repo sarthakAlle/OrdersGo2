@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import './Login.css';
 import { Link } from 'react-router-dom';
-
+import '../Card/Card.css'
+import '../Home/Home.css'
 const Login = () => {
   const [loginEmail, setLoginEmail] = useState('');
   const [loginPassword, setLoginPassword] = useState('');
@@ -13,6 +14,7 @@ const Login = () => {
   };
 
   return (
+<div className='custom-grid2'>
     <div className='custom-card login-card'>
       <h2>Login</h2>
       <form onSubmit={handleLogin}>
@@ -40,6 +42,7 @@ const Login = () => {
       Create one
       </Link>
       </p>
+    </div>
     </div>
   );
 };

@@ -13,6 +13,7 @@ input[type='password'] {
   width: 400px;
 }
 
+
 .signUp-button {
   margin: auto;
   color: black;
@@ -24,7 +25,13 @@ input[type='password'] {
 }
 
 .signUp-card{
-  margin:auto;
+  background-color: #ddd;
+  color: black;
+  margin: 20px;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  margin:0 auto;
   height:350px;
   width:600px;
 }
@@ -38,3 +45,8 @@ width: 90%;
 }
 }
 
+.custom-grid3{
+  margin: 0 auto;
+  max-width:1400px;
+  height: 2000px;
+}

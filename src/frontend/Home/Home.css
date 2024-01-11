@@ -1,4 +1,8 @@
 .custom-grid {
+    position: relative;
+    margin: 0 auto;
     display: grid;
+    max-width:1400px;
+    height: 2000px;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }

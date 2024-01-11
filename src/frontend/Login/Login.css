@@ -23,8 +23,16 @@ input[type='password'] {
   width: 200px;
 }
 
+.custom-grid2 {
+  position: relative;
+  margin: 0 auto;
+  max-width:1400px;
+  height: 2000px;
+  display: flex;
+}
+
 .login-card{
-  margin:auto;
+  margin:0 auto;
   height:300px;
   width:600px;
 }

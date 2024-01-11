@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './SignUp.css';
 import { Link } from 'react-router-dom';
 
+
 const Signup = () => {
   const [signupUsername, setSignupUsername] = useState('');
   const [signupEmail, setSignupEmail] = useState('');
@@ -14,7 +15,8 @@ const Signup = () => {
   };
 
   return (
-    <div className='custom-card signUp-card'>
+    <div className='custom-grid3'>
+    <div className='signUp-card'>
       <h2>Sign Up</h2>
       <form onSubmit={handleSignup}>
         <div>
@@ -48,6 +50,7 @@ const Signup = () => {
             <Link to='/Login'> Login</Link>
         </p>
       </form>
+    </div>
     </div>
   );
 };

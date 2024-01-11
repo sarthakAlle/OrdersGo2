@@ -1,38 +1,44 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Footer.css';
+import { now } from 'mongoose';
 
 export default function footer() {
   return (
     <div>
-      <footer className="custom-footer">
-        <div className="footer-section">
+       <footer className="custom-footer"> 
+      {/*
+       <div className="footer-section">
           <h3>Quick Links</h3>
+          <p>Here some quick links to our products:</p>
           <ul>
             <li>
-           <Link>order in wholesale</Link>
+             <a href='#' style={{textDecoration:'none', color:'white'}}>Screws</a>
             </li>
             <li>
-           <Link>order from retail</Link>
+            <a href='#' style={{textDecoration:'none', color:'white'}}>Nuts and bolts</a>
             </li>
             <li>
-           <Link>order specific batches</Link>
+            <a href='#' style={{textDecoration:'none', color:'white'}}>Jack hammer</a>
+            </li>
+            <li>
+            <a href='#' style={{textDecoration:'none', color:'white'}}>Guage</a>
             </li>
         </ul>
         </div>
 
         <div className="footer-section">
           <h3>Contacts</h3>
-          <p>you can contact us via</p>
+          <p>you can contact us via :</p>
           <ul>
             <li>
-           <Link>ordersgo@gmail.com</Link>
+            <a href='#' style={{textDecoration:'none', color:'white'}}>LinkedIn</a>
             </li>
             <li>
-           <Link>+91-3278328323</Link>
+            <a href='#' style={{textDecoration:'none', color:'white'}}>Facebook</a>
             </li>
             <li>
-           <Link>order_personal</Link>
+            <a href='#' style={{textDecoration:'none', color:'white'}}>Twitter</a>
             </li>
         </ul>
         </div>
@@ -40,11 +46,14 @@ export default function footer() {
         <div className="footer-section">
           <h3>NewsLetter</h3>
           <p>Subscribe to get in touch with the lastest news</p>
-          <form>
+          <form className='newsletter-container'>
             <input type ='email' placeholder='enter your email'></input>
           </form>
         </div>
-      </footer>
+*/} 
+  </footer>
+
     </div>
   )
+
 }

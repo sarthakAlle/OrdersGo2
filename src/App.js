@@ -4,6 +4,8 @@ import Login from './frontend/Login/Login.js';
 import Navbar from "./frontend/Navbar/Navbar.js";
 import Footer from "./frontend/Footer/Footer.js";
 import Corousal from "./frontend/Carousal/Carousal.js";
+import Services from "./frontend/Services/Services.js";
+import  About from "./frontend/About/About.js";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import SignUp from './frontend/SignUp/SignUp.js'; 
 import './App.css';
@@ -30,6 +32,8 @@ function App() {
             <Route path='/' element={<Home />} index />
             <Route path="/Home" element={<Home />} />
             <Route path='/Login' element={<Login />} />
+            <Route path="/Services" element={<Services />} />
+            <Route path='/About' element={<About />} />
             <Route path='/Login/Signup' element={<SignUp/>} />
             </Routes>
             <Footer/>

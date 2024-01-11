@@ -1,6 +1,10 @@
 .App {
   text-align: center;
   position: relative;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+
 }
 
 .custom-container{
@@ -8,7 +12,7 @@
   position:absolute;
   top:0;
   left:0;
-  min-height: 100vh;
+  height: 100vh;
 }
 
 .App-logo {
