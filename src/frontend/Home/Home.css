@@ -6,3 +6,8 @@
     height: 2000px;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }
+@media screen and (max-width:600px) {
+    .custom-grid{
+        height: 4000px;
+    }
+}
