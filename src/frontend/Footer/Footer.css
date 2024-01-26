@@ -1,7 +1,43 @@
 .custom-footer {
-  height: 10vh;
+  height: 300px;
   width: 100%;
   background-color: grey;
   position: relative;
-  margin-top: auto;
+  display: grid;
+  place-items: center;
 }
+
+.footer-grid {
+  position: relative;
+  padding-top: 40px;
+  max-width: 1400px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+}
+
+.footer-column ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-column ul li {
+  text-align: left;
+  padding-left: 130px;
+}
+
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.news-letter-container {
+  display: flex;
+  flex-direction: column;
+}
+p{
+  width:300px; 
+  text-align:left; 
+  margin-Left:150px;
+}
+

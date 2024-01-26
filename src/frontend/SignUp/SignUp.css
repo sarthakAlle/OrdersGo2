@@ -4,7 +4,8 @@ button:hover {
 
 input[type='email'],
 input[type='text'],
-input[type='password'] {
+input[type='password'],
+input[type='location'] {
   color: black;
   margin: 10px;
   background-color: white;
@@ -32,7 +33,7 @@ input[type='password'] {
   display: flex;
   flex-direction: column;
   margin:0 auto;
-  height:350px;
+  height:400px;
   width:600px;
 }
 

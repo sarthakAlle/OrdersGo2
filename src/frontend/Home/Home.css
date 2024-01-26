@@ -2,6 +2,7 @@
     position: relative;
     margin: 0 auto;
     display: grid;
+    place-items: center;
     max-width:1400px;
     height: 2000px;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -9,5 +10,6 @@
 @media screen and (max-width:600px) {
     .custom-grid{
         height: 4000px;
+        background-color: yellow;
     }
 }

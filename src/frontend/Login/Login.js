@@ -1,17 +1,53 @@
 import React, { useState } from 'react';
 import './Login.css';
-import { Link } from 'react-router-dom';
+import { Link ,useNavigate} from 'react-router-dom';
 import '../Card/Card.css'
 import '../Home/Home.css'
+
 const Login = () => {
   const [loginEmail, setLoginEmail] = useState('');
   const [loginPassword, setLoginPassword] = useState('');
-
-  const handleLogin = (e) => {
+  const navigate =useNavigate();
+  const handleLogin = async (e) => {
     e.preventDefault();
-    // Add your login logic here
-    console.log('Login:', loginEmail, loginPassword);
+    try {
+      const response = await fetch("http://localhost:5000/api/loginUser", {
+        method: 'POST',
+        headers: {
+          'Content-type': 'application/json'
+        },
+        body: JSON.stringify({ email: loginEmail, password: loginPassword })
+      });
+  
+      const json = await response.json();
+  
+      console.log('Server Response:', json); // Log the entire response to the console
+  
+      if (!json.success) {
+        if (json.errors) {
+          // Handle validation errors
+          const validationErrors = json.errors.map(error => error.msg).join(', ');
+          alert(`Validation failed: ${validationErrors}`);
+        } else if (json.error) {
+          // Handle other errors
+          console.error('Login error:', json.error);
+          alert(`Error during login: ${json.error}`);
+        } else {
+          // If there is no specific error message, provide a generic one
+          console.error('Login error: Unknown error');
+          alert("Error during login. Please check the console for details.");
+        }
+      } else {
+        localStorage.setItem("authToken",json.authToken);
+        console.log(localStorage.getItem("authToken"));
+        navigate('/');
+      }
+    } catch (error) {
+      console.error('Fetch error:', error.message);
+      alert("Error during login. Please check the console for details.");
+    }
   };
+  
 
   return (
 <div className='custom-grid2'>

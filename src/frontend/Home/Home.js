@@ -1,49 +1,59 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import Card from '../Card/Card.js';
 
 import './Home.css'
 function Home() {
-    const messages = [
-        "Turn Your Projects with Precision!",
-        "Measure Excellence with Our Gauges!",
-        "Bolt Up Your Solutions with Strength!",
-        "Drive Innovation with the Right Tools!",
-        "Forge Success with Every Strike!",
-        "Pinpoint Perfection in Every Detail!",
-        "Nail Your Goals with Confidence!",
-        "Rolling Towards Reliability and Durability!",
-        "Powering Progress, One Engine at a Time!",
-        "Lubricate Life's Journeys for Smooth Success!"
-      ];
 
-  
-    const keywords=['Screw','Guage','Bolt','Screwdriver','Hammer','Pin','Nail','Tyre','Engine','Oil'];
-    const prizes=[10,100,40,14,89,45,24,56,90,55];
-    const imageLinks = [
-        "https://source.unsplash.com/random/800x100/?screw",
-        "https://source.unsplash.com/random/800x100/?guage",
-        "https://source.unsplash.com/random/800x100/?bolt",
-        "https://source.unsplash.com/random/800x100/?screwdriver",
-        "https://source.unsplash.com/random/800x100/?hammer",
-        "https://source.unsplash.com/random/800x100/?pin",
-        "https://source.unsplash.com/random/800x100/?nail",
-        "https://source.unsplash.com/random/800x100/?tyre",
-        "https://source.unsplash.com/random/800x100/?engine",
-        "https://source.unsplash.com/random/800x100/?oil"
-      ];
-return (
-    <div>
+  const [toolsItem, setToolsItem] = useState([]);
+  const [toolsCat, setToolsCat] = useState([]);
+  const loadData = async () => {
+    try {
+      let response = await fetch("http://localhost:5000/api/displayData", {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      });
+
+      if (!response.ok) {
+        throw new Error(`Error: ${response.status} - ${response.statusText}`);
+      }
+
+      response = await response.json();
+      console.log("Fetched data:", response);
+      setToolsItem(response[0]);
+      setToolsCat(response[1]);
+    } catch (error) {
+      console.error("Error loading data:", error);
+    }
+  };
+
+  useEffect(() => {
+    loadData();
+  }, []);
+
+  console.log("Tool Items:", toolsItem);
+  console.log("Tool Categories:", toolsCat);
+
+
+  useEffect(() => {
+    loadData();
+  }, []);
+
+  return (
     <div className='custom-grid'>
-    {/*keywords.map((word, index) => (
-          <Card key={index} title={word} />
-    ))*/}
-        {imageLinks.map((link, index) => (
-          <Card key={index} prize={prizes[index]} title={keywords[index]} info={messages[index]} imageSrc={link} />
-        ))}
+      {
+        toolsItem.length !== 0 ? (
+          toolsItem.map((data, index) => (
+            <Card key={index} prize={data.prize} title={data.name} info={data.description} imageSrc={data.img} />
+          ))
+        ) : (
+          <div></div>
+        )
+      }
+
     </div>
-    </div>
- 
-);
+  );
 }
 
 export default Home;

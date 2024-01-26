@@ -33,7 +33,7 @@ export default function Card({ imageSrc, title, info, prize }) {
       <img className="card-img-top" src={imageSrc} alt="Card image cap" />
       <div className="card-body">
         <h5 className="card-title">{title}</h5>
-        <p className="card-text" style={{ height: '50px' }}>
+        <p className="card-text" style={{ height: '50px'}}>
           {info}
         </p>
         <select id='select' className='quantity' onChange={handleChange} value={selectedOption}>

@@ -9,6 +9,10 @@
   max-height: 300px;
 }
 
+.card-text{
+ background-color: yellow;
+}
+
 .price-button {
   margin: auto ;
   margin-bottom:  5px !important;
@@ -31,10 +35,4 @@
   background-color: peachpuff;
   height: 30px;
   margin: 10px;
-}
-
-@media screen and (max-width:600px) {
-  .custom-card{
-      margin: auto;
-  }
 }
