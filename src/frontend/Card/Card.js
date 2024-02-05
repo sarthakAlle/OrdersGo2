@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Card.css';
 
-export default function Card({ imageSrc, title, info, prize }) {
+export default function Card({prize, imageSrc, title, info }) {
   const [selectedOption, setSelectedOption] = useState('half'); // Initial state for the selected option
   const [quantity, setQuantity] = useState(1); // Initial state for the quantity
 
@@ -31,11 +31,12 @@ export default function Card({ imageSrc, title, info, prize }) {
   return (
     <div className='custom-card'>
       <img className="card-img-top" src={imageSrc} alt="Card image cap" />
-      <div className="card-body">
-        <h5 className="card-title">{title}</h5>
-        <p className="card-text" style={{ height: '50px'}}>
-          {info}
-        </p>
+      <div>
+        <h5>{title}</h5>
+        <center>
+        {info}
+        </center>
+        
         <select id='select' className='quantity' onChange={handleChange} value={selectedOption}>
           <option value="half">Half</option>
           <option value="full">Full</option>
@@ -47,7 +48,8 @@ export default function Card({ imageSrc, title, info, prize }) {
             </option>
           ))}
         </select>
-        <div className="price-button">Total prize {quantity * prize}</div>
+
+        <div className="price-button">Total prize {(quantity * prize).toFixed(2)}</div>
       </div>
     </div>
   );

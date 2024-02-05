@@ -23,8 +23,7 @@ import "../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
 
 function App() {
   return (
-    <div className="App">
-            <div className="custom-container">
+    <div className="App">    
             <Router>
             <Navbar/>
             <Corousal/>
@@ -39,7 +38,7 @@ function App() {
             <Footer/>
            </Router>
             </div>
-    </div>
+   
   );
 }
 

@@ -74,10 +74,13 @@ const Login = () => {
           Login
         </button>
       </form>
+      <center>
       <p>dont't have an account yet? <Link to ='./SignUp'>
       Create one
       </Link>
       </p>
+      </center>
+ 
     </div>
     </div>
   );

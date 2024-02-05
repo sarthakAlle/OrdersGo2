@@ -22,16 +22,16 @@ const Signup = () => {
         body: JSON.stringify({ name: signupUsername.name, email: signupEmail.email, password: signupPassword.password, location: signupLocation.geolocation })
       });
   
-      const json = await response.json();
-      
-      if (!json.success) {
-        if (json.errors) {
+      const json1 = await response.json();
+      console.log(json1);
+      if (!json1.success) {
+        if (json1.errors) {
           // Handle validation errors
-          const validationErrors = json.errors.map(error => error.msg).join(', ');
+          const validationErrors = json1.errors.map(error => error.msg).join(', ');
           alert(`Validation failed: ${validationErrors}`);
         } else {
           // Handle other errors
-          console.error('Signup error:', json.errorMessage);
+          console.error('Signup error:', json1.errorMessage);
           alert("Error during signup. Please check the console for details.");
         }
       }
@@ -99,9 +99,12 @@ const Signup = () => {
       <button className='login-button' type="submit">
         Sign Up
       </button>
+      <center>
       <p>Already have an account?
         <Link to='/Login'> Login</Link>
       </p>
+      </center>
+
     </form>
   </div>
 </div>

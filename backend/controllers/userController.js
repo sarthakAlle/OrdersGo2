@@ -17,7 +17,7 @@ exports.createUser = async (req, res) => {
       password,
       location
     });
-
+   console.log(newUser);
     // Save the user to the database
     await newUser.save();
 

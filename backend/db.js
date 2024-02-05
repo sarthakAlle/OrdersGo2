@@ -27,16 +27,11 @@ async function printToolsDataCollection() {
     // Print the documents
     console.log('Documents in the "foodData" collection:');
     console.log([food_items,food_category]);
-return [food_items,food_category];
+    return [food_items,food_category];
   } catch (error) {
     console.error('Error connecting to the database or retrieving documents:', error);
     throw error;
-  } finally {
-    // Close the connection
-    await client.close();
-    console.log('connection closed');
   }
-
 }
 
 // Export the function for use in other files

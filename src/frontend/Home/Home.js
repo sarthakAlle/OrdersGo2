@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, useState } from 'react';
 import Card from '../Card/Card.js';
-
+import Footer from '../Footer/Footer.js';
 import './Home.css'
 function Home() {
 
@@ -45,13 +45,12 @@ function Home() {
       {
         toolsItem.length !== 0 ? (
           toolsItem.map((data, index) => (
-            <Card key={index} prize={data.prize} title={data.name} info={data.description} imageSrc={data.img} />
+            <Card key={index} prize={data.price} title={data.name} info={data.description} imageSrc={data.img} />
           ))
         ) : (
           <div></div>
         )
       }
-
     </div>
   );
 }

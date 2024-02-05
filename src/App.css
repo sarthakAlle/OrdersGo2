@@ -1,19 +1,12 @@
 .App {
   text-align: center;
   position: relative;
-  display: flex;
   position: relative;
+  min-height:100vh;
+  display: flex;
   flex-direction: column;
-
 }
 
-.custom-container{
-  width: 100vw;
-  position:absolute;
-  top:0;
-  left:0;
-  height: 100vh;
-}
 
 .App-logo {
   height: 40vmin;
@@ -49,3 +42,4 @@
     transform: rotate(360deg);
   }
 }
+
