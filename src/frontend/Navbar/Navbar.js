@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import './Navbar.css';
+import './Navbar.css'; 
 
 function BasicExample() {
   const [isActive, setIsActive] = useState(false);

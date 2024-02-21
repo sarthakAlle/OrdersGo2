@@ -4,9 +4,17 @@ const path = require('path');
 const app = express();
 const port = 5000;
 const db = require('./db');
+const dotenv = require('dotenv');
 
 // Call the exported function
 db.connectdatabase();
+
+
+dotenv.config({path:'./config.env'}); // This loads the variables from the .env file
+console.log(process.env.JWT_SECRET);
+// Now you can access your environment variables like this:
+//console.log(process.env.MONGO_URI);
+
 
 // Use cors middleware to handle CORS headers
 app.use(cors());

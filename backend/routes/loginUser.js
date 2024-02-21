@@ -4,7 +4,7 @@ const User = require('../models/userModel');
 const { body, validationResult } = require('express-validator');
 const bcrypt = require('bcrypt');
 const jwt=require("jsonwebtoken");
-const jwtSecret="jqjwebfxqefbjkfdhewkjhwediueghfxnewfmwexqkfhzmkhf";
+
 
 router.post('/loginUser', async (req, res) => {
     let email=req.body.email;
@@ -22,7 +22,7 @@ router.post('/loginUser', async (req, res) => {
         id:userData.id
       }
      }
-     const authToken=jwt.sign(data,jwtSecret);
+     const authToken=jwt.sign(data,process.env.JWT_SECRET);
    return res.json({success:true,authToken:authToken});
     } catch (error) {
      console.log(error);

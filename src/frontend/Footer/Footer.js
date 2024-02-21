@@ -26,15 +26,14 @@ export default function footer() {
       </section>
 
       <section className=''>
-        <MDBContainer className='text-center text-md-start mt-5'>
-          <MDBRow className='mt-3'>
+        <MDBContainer className='text-center text-md-start mt-5 custom-con'>
+          <MDBRow className='mt-3  custom-row'>
             <MDBCol md="3" lg="4" xl="3" className='mx-auto mb-4'>
               <h6 className='text-uppercase fw-bold mb-4'>
-                <MDBIcon icon="gem" className="me-3" />
+                <MDBIcon icon="gem" className="me-3 " />
                 Orders Go
               </h6>
               <p>
-
                 Welcome to OrdersGo – your go-to source for top-notch tools! Explore our streamlined platform for a hassle-free shopping experience. Find high-quality hand tools, power tools, and accessories from leading brands. At OrdersGo, we prioritize simplicity, affordability, and customer satisfaction. Elevate your tool collection with ease – start shopping now!
               </p>
             </MDBCol>

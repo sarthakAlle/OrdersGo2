@@ -3,9 +3,10 @@
     margin: 0 auto;
     display: grid;
     place-items: center;
-    width: 1400px;
+    max-width: 1200px;
     flex: 1;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    background-color: yellow;
 }
 
 @media screen and (max-width:1400px) {
@@ -17,6 +18,5 @@
 @media screen and (max-width:600px) {
     .custom-grid {
         height: 4000px;
-        background-color: yellow;
     }
 }

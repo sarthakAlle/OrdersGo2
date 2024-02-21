@@ -9,7 +9,7 @@ body {
 }
 
 footer {
-  width: 100%;
+  width: 98.9vw;
   background: linear-gradient(to right, #00093c, #2d0b00);
   color: #fff;
   border-top-left-radius: 125px;
@@ -44,4 +44,19 @@ footer {
 
 .link-no-decoration {
   text-decoration: none;
+}
+
+.custom-row{
+max-width: 80vw !important;
+background-color: yellow;
+}
+
+@media screen and (min-width:1400px) {
+  .footer{
+    width:100vw;
+    background: yellow;
+  }
+}
+.custom-con{
+  background-color: yellow;
 }
