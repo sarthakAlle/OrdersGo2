@@ -11,7 +11,6 @@ db.connectdatabase();
 
 
 dotenv.config({path:'./config.env'}); // This loads the variables from the .env file
-console.log(process.env.JWT_SECRET);
 // Now you can access your environment variables like this:
 //console.log(process.env.MONGO_URI);
 

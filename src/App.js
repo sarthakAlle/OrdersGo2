@@ -9,7 +9,7 @@ import  About from "./frontend/About/About.js";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import SignUp from './frontend/SignUp/SignUp.js'; 
 import './App.css';
-
+import Profile from './frontend/Profile/Profile.js'
 
 import {
   BrowserRouter as Router,
@@ -33,6 +33,7 @@ function App() {
             <Route path='/Login' element={<Login />} />
             <Route path="/Services" element={<Services />} />
             <Route path='/About' element={<About />} />
+            <Route path="/Profile" element={<Profile />} />
             <Route path='/Login/Signup' element={<SignUp/>} />
             </Routes>
             <Footer/>
