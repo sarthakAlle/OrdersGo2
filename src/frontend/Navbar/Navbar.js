@@ -46,3 +46,33 @@ function BasicExample() {
 }
 
 export default BasicExample;
+
+/*
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import './Navbar.css';
+
+function ResponsiveNavbar() {
+  return (
+    <Container >
+       <Navbar  bg="light" expand="sm" className='navbar'>  
+
+        <Container fluid>
+          <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+          <Navbar.Collapse id="responsive-navbar-nav" className="justify-content-end">
+            <Nav>
+              <Nav.Link href="#home">Home</Nav.Link>
+              <Nav.Link href="#features">Features</Nav.Link>
+              <Nav.Link href="#pricing">Pricing</Nav.Link>
+            </Nav>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
+    </Container>
+  );
+}
+
+export default ResponsiveNavbar;
+*/

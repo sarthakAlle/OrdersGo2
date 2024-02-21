@@ -1,38 +1,57 @@
-// db.js
+/*const mongoose = require('mongoose');
 
-const { MongoClient } = require('mongodb');
+const uri = 'mongodb://localhost:27017/ordersGo';
 
-async function printToolsDataCollection() {
-  // Connection URI
-  const uri = 'mongodb://localhost:27017/ordersGo'; // Change the URL as needed
-
-  // Create a new MongoClient
-  const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
-
-  // Connect to the MongoDB server
-  try {
-    await client.connect();
-    console.log('Connected to the database');
-
-    // Access the "ordersGo" database
-    const database = client.db('ordersGo');
-
-    // Access the "foodData" collection
-    const food_items_collection = database.collection('toolsData');
-    const food_category_collection = database.collection('foodCategory');
-
-    // Find all documents in the "foodData" collection
-     var food_items = await food_items_collection.find({}).toArray();
-    var food_category= await food_category_collection.find({}).toArray();
-    // Print the documents
-    console.log('Documents in the "foodData" collection:');
-    console.log([food_items,food_category]);
-    return [food_items,food_category];
-  } catch (error) {
-    console.error('Error connecting to the database or retrieving documents:', error);
-    throw error;
-  }
+async function connectToDatabase() {
+    try {
+        await mongoose.connect(uri, {
+            useNewUrlParser: true,
+            useUnifiedTopology: true
+        });
+        console.log('Connected to MongoDB');
+    } catch (error) {
+        console.error('Error connecting to MongoDB:', error);
+        throw error; // Re-throw for error handling
+    }
 }
 
-// Export the function for use in other files
-module.exports = {printToolsDataCollection };
+async function fetchData(collectionName, query = {}) {
+    try {
+        const db = mongoose.connection.db;
+        const collection = db.collection(collectionName);
+        const data = await collection.find(query).toArray();
+        return data;
+    } catch (error) {
+        console.error(`Error retrieving data from collection "${collectionName}":`, error);
+        throw error; // Re-throw for error handling
+    }
+}
+
+async function printToolsDataCollection() {
+   const [toolItems] = await Promise.all([fetchData('toolsData')]);
+    console.log('Documents in "toolsData" collection:', toolItems);
+}
+
+module.exports = {
+    connectToDatabase,
+    fetchData,
+    printToolsDataCollection
+};
+*/
+// db.js
+
+// 
+
+const mongoose=require('mongoose');
+
+const connectdatabase=()=>{
+    mongoose.connect("mongodb://localhost:27017/ordersGo")
+.then(()=>{
+    console.log('mongodb is connected');
+}).catch((err)=>{
+    console.log(err);
+});
+}
+
+module.exports={connectdatabase};
+

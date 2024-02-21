@@ -1,0 +1,51 @@
+[
+    {
+      "name": "Guage",
+      "img": "https://source.unsplash.com/random/800x100/?guage",
+      "price": 129.99,
+      "description": "A powerful cordless drill for various drilling and screwing tasks."
+    },
+    {
+      "name": "Bolt",
+      "img": "https://source.unsplash.com/random/800x100/?bolt",
+      "price": 8.99,
+      "description": "High-quality pruning shears for trimming and shaping plants."
+    },
+    {
+      "name": "Screwdriver",
+      "img": "https://source.unsplash.com/random/800x100/?screwdriver",
+      "price": 24.99,
+      "description": "Durable tape measure for accurate measurements in various applications."
+    },
+    {
+      "name": "Hammer",
+      "img": "https://source.unsplash.com/random/800x100/?hammer",
+      "price": 19.99,
+      "description": "Versatile utility knife for cutting a variety of materials with precision."
+    },
+    {
+      "name": "Pin",
+      "img": "https://source.unsplash.com/random/800x100/?pin",
+      "price": 2.99,
+      "description": "Various pins for securing objects in place."
+    },
+    {
+      "name": "Nail",
+      "img": "https://source.unsplash.com/random/800x100/?nail",
+      "price": 4.99,
+      "description": "Assorted nails for carpentry and construction."
+    },
+    {
+      "name": "Tyre",
+      "img": "https://source.unsplash.com/random/800x100/?tyre",
+      "price": 49.99,
+      "description": "High-quality tires for various vehicles."
+    },
+    {
+      "name": "Engine Oil",
+      "img": "https://source.unsplash.com/random/800x100/?engine",
+      "price": 34.99,
+      "description": "Engine oil for maintaining optimal engine performance."
+    }
+  ]
+  

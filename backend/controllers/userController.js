@@ -4,12 +4,25 @@ const User = require('../models/userModel');
 exports.createUser = async (req, res) => {
   try {
     const { username, email, password,location } = req.body;
+   
 
-    // Validate input (you may want to use a validation library like 'validator')
-    if (!username || !email || !password||!location) {
-      return res.status(400).json({ error: 'Please provide username, email, password & location' });
+    if (!email) {
+      return res.status(400).json({ error: 'Please provide email '});
+    }else
+    if (!password) {
+      return res.status(400).json({ error: 'Please providepassword ' });
+    }else
+    if (!location) {
+      return res.status(400).json({ error: 'Please provide  location' });
+    }else
+    if (!username) {
+      return res.status(400).json({ error: 'Please provide username' });
     }
 
+    const user = await User.findOne({ $or: [{ username }, { email }] });
+    if (user) {
+      return res.status(404).json({ error: `user already exists` });
+    }
     // Create a new user instance
     const newUser = new User({
       username,
