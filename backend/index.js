@@ -8,7 +8,7 @@ const dotenv = require('dotenv');
 
 // Call the exported function
 db.connectdatabase();
-
+//console.log(process.env.MONGO_URI);
 
 dotenv.config({path:'./config.env'}); // This loads the variables from the .env file
 // Now you can access your environment variables like this:

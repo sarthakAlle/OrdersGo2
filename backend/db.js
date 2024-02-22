@@ -43,9 +43,12 @@ module.exports = {
 // 
 
 const mongoose=require('mongoose');
+const dotenv = require('dotenv');
+dotenv.config({path:'./config.env'});
 
 const connectdatabase=()=>{
-    mongoose.connect("mongodb://localhost:27017/ordersGo")
+//mongodb://localhost:27017/ordersGo
+    mongoose.connect(process.env.MONGO_URI)
 .then(()=>{
     console.log('mongodb is connected');
 }).catch((err)=>{

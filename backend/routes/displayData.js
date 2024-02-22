@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const fetchToolsData = require('../controllers/fetchToolsData'); // Import the function
+//const fetchToolsData = require('../controllers/fetchToolsData'); // Import the function
 const toolsModel=require('../models/toolsDataModel');
 
 router.get('/displayData', async (req, res) => {

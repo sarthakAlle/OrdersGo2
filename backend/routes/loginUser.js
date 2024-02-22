@@ -63,7 +63,7 @@ router.post('/loginUser', async (req, res) => {
           // Set the cookie with the token
           res.cookie('authToken', authToken, {
               httpOnly: true, // Protect against client-side JavaScript access
-              secure: process.env.NODE_ENV === 'production', // Secure flag for production
+             // secure: process.env.NODE_ENV === 'production', // Secure flag for production
               sameSite: 'strict', // Mitigate CSRF attacks
               maxAge: 900000, // Expire after 15 minutes (adjust as needed)
           });
