@@ -3,8 +3,7 @@
     "builds": [
       {
         "src": "backend", 
-        "use": "@vercel/node", 
-        "cmd": "npm run build" 
+        "use": "@vercel/node"
       }
     ],
     "routes": [
