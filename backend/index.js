@@ -14,10 +14,14 @@ dotenv.config({path:'./config.env'}); // This loads the variables from the .env 
 // Now you can access your environment variables like this:
 //console.log(process.env.MONGO_URI);
 
-
+const corsConfig={
+  origin:"*",
+  credential:true,
+  methods:['GET','POST','PUT','DELETE']
+};
 // Use cors middleware to handle CORS headers
-app.use(cors());
-
+app.use(cors(corsConfig));
+app.options("",cors(corsConfig));
 app.use(express.json());
 app.get('/', (req, res) => {
   res.send('jai shree ram');
