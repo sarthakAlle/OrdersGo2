@@ -15,7 +15,7 @@ dotenv.config({path:'./config.env'}); // This loads the variables from the .env 
 //console.log(process.env.MONGO_URI);
 
 const corsConfig={
-  origin:"",
+  origin:"https://orders-go2.vercel.app",
   credential:true
 };
 // Use cors middleware to handle CORS headers
