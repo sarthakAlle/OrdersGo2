@@ -47,8 +47,8 @@ const dotenv = require('dotenv');
 dotenv.config({path:'./config.env'});
 
 const connectdatabase=()=>{
-//mongodb://localhost:27017/ordersGo process.env.MONGO_URI
-    mongoose.connect("mongodb+srv://sartiwari20:Hanuman%402001@cluster0.s2ezjwj.mongodb.net/")
+//mongodb://localhost:27017/ordersGo 
+    mongoose.connect(process.env.MONGO_URI)
 .then(()=>{
     console.log('mongodb is connected');
 }).catch((err)=>{
