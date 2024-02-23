@@ -15,9 +15,8 @@ dotenv.config({path:'./config.env'}); // This loads the variables from the .env 
 //console.log(process.env.MONGO_URI);
 
 const corsConfig={
-  origin:"*",
-  credential:true,
-  methods:['GET','POST','PUT','DELETE']
+  origin:"",
+  credential:true
 };
 // Use cors middleware to handle CORS headers
 app.use(cors(corsConfig));
