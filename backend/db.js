@@ -44,7 +44,7 @@ module.exports = {
 
 const mongoose=require('mongoose');
 const dotenv = require('dotenv');
-dotenv.config({path:'./config.env'});
+dotenv.config({path:'./.env'});
 
 const connectdatabase=()=>{
 //mongodb://localhost:27017/ordersGo 
