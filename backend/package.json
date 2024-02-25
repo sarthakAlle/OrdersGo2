@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --config webpack.config.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
@@ -24,7 +23,6 @@
   },
   "devDependencies": {
     "nodemon": "^3.1.0",
-    "webpack": "^5.90.3",
-    "webpack-cli": "^5.1.4"
+    "webpack": "^5.90.3"
   }
 }
