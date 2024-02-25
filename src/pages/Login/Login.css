@@ -1,0 +1,51 @@
+button:hover {
+  background-color: #2980b9;
+}
+
+input[type='email'],
+input[type='text'],
+input[type='password'] {
+  color: black;
+  margin: 10px;
+  background-color: white;
+  border-radius: 10px;
+  padding: 10px;
+  width: 400px;
+}
+
+.login-button {
+  margin: auto;
+  color: black;
+  border: solid black 2px;
+  background-color: violet;
+  border-radius: 10px;
+  padding: 10px;
+  width: 200px;
+}
+
+.custom-grid2 {
+  position: relative;
+  margin: 0 auto;
+  max-width:1400px;
+  height: 2000px;
+  display: flex;
+}
+
+.login-card{
+  margin:0 auto;
+  height:300px;
+  width:600px;
+}
+
+@media only screen and (max-width: 650px) {
+.login-card,.login-button ,
+input[type='email'],
+input[type='text'],
+input[type='password'] {
+width: 90%;
+}
+}
+.login-card h2,.login-card p{
+  color: black;
+}
+

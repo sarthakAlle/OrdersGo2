@@ -2,7 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const path = require('path');
 const app = express();
-const port = 5000;
+const port =process.env.PORT||5000;
 const db = require('./db');
 const dotenv = require('dotenv');
 
@@ -15,7 +15,7 @@ dotenv.config({path:'./config.env'}); // This loads the variables from the .env 
 //console.log(process.env.MONGO_URI);
 
 const corsConfig={
-  origin:"https://orders-go2.vercel.app",
+  origin:"*",
   credential:true
 };
 // Use cors middleware to handle CORS headers
@@ -30,6 +30,7 @@ app.use('/api', require('./routes/userRoutes'));
 app.use('/api', require('./routes/loginUser'));
 app.use('/api', require('./routes/displayData'));
 app.use('/api', require('./controllers/toolControllers'));
+app.use(express.static(path.join(__dirname,"")));
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);

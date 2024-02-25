@@ -1,0 +1,9 @@
+.style{
+    flex-direction: column;
+}
+.service-section{
+    margin: 5vh 10vw;
+}
+h2,p{
+    color: aliceblue;
+}

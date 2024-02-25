@@ -1,15 +1,15 @@
 import React from "react";
-import Home from './frontend/Home/Home.js';
-import Login from './frontend/Login/Login.js';
-import Navbar from "./frontend/Navbar/Navbar.js";
-import Footer from "./frontend/Footer/Footer.js";
-import Corousal from "./frontend/Carousal/Carousal.js";
-import Services from "./frontend/Services/Services.js";
-import  About from "./frontend/About/About.js";
+import Home from './pages/Home/Home.js';
+import Login from './pages/Login/Login.js';
+import Navbar from "./pages/Navbar/Navbar.js";
+import Footer from "./pages/Footer/Footer.js";
+import Corousal from "./pages/Carousal/Carousal.js";
+import Services from "./pages/Services/Services.js";
+import  About from "./pages/About/About.js";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import SignUp from './frontend/SignUp/SignUp.js'; 
+import SignUp from './pages/SignUp/SignUp.js'; 
 import './App.css';
-import Profile from './frontend/Profile/Profile.js'
+import Profile from './pages/Profile/Profile.js'
 
 import {
   BrowserRouter as Router,

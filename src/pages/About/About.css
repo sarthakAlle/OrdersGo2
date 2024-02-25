@@ -1,0 +1,7 @@
+.style{
+    flex-direction: column;
+}
+.custom-section{
+    margin: 5vh 10vw;
+    color: bisque;
+}

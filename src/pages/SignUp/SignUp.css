@@ -1,0 +1,56 @@
+button:hover {
+  background-color: #2980b9;
+}
+
+input[type='email'],
+input[type='text'],
+input[type='password'],
+input[type='location'] {
+  color: black;
+  margin: 10px;
+  background-color: white;
+  border-radius: 10px;
+  padding: 10px;
+  width: 400px;
+}
+
+
+.signUp-button {
+  margin: auto;
+  color: black;
+  border: solid black 2px;
+  background-color: violet;
+  border-radius: 10px;
+  padding: 10px;
+  width: 200px;
+}
+
+.signUp-card{
+  background-color: #ddd;
+  color: black;
+  margin: 20px;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  margin:0 auto;
+  height:400px;
+  width:600px;
+}
+
+@media only screen and (max-width: 650px) {
+.signUp-card,.signUp-button ,
+input[type='email'],
+input[type='text'],
+input[type='password'] {
+width: 90%;
+}
+}
+
+.custom-grid3{
+  margin: 0 auto;
+  max-width:1400px;
+  height: 2000px;
+}
+.signUp-card h2,.signUp-card p{
+  color: black;
+}
